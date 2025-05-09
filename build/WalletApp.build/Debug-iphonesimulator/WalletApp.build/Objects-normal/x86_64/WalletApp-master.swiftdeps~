@@ -1,0 +1,21 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "21e566ee61e8ac3155a1c36f53c5d6ede18031def67fedd935f56228a4a590cb"
+build_start_time: [1746793987, 716606140]
+build_end_time: [1746793987, 806418895]
+inputs:
+  "/Users/trakya11/Desktop/WalletApp2/WalletApp/WalletApp/AddTransactionViewController.swift": !private [1746791145, 22490978]
+  "/Users/trakya11/Desktop/WalletApp2/WalletApp/WalletApp/AppDelegate.swift": !private [1746793791, 114103794]
+  "/Users/trakya11/Desktop/WalletApp2/WalletApp/WalletApp/SceneDelegate.swift": !private [1746790650, 222447633]
+  "/Users/trakya11/Desktop/WalletApp2/WalletApp/WalletApp/ViewController.swift": !private [1746790465, 289512634]
+  ? "/Users/trakya11/Desktop/WalletApp2/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Card+CoreDataModel.swift"
+  : !private [1746793987, 484097003]
+  ? "/Users/trakya11/Desktop/WalletApp2/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataClass.swift"
+  : !private [1746793987, 486960411]
+  ? "/Users/trakya11/Desktop/WalletApp2/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataProperties.swift"
+  : !private [1746793987, 488516807]
+  ? "/Users/trakya11/Desktop/WalletApp2/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletApp+CoreDataModel.swift"
+  : !private [1746793987, 484095811]
+  ? "/Users/trakya11/Desktop/WalletApp2/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataClass.swift"
+  : !private [1746793987, 486977338]
+  ? "/Users/trakya11/Desktop/WalletApp2/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataProperties.swift"
+  : !private [1746793987, 488201141]
