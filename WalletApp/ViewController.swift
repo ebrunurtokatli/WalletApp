@@ -8,6 +8,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 @IBOutlet weak var balanceLabel: UILabel!
 @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var incomePieChartView: PieChartView!
+    @IBOutlet weak var expensePieChartView: PieChartView!
+
 
 // 🔴 Yeni eklendi: Segmented Control outlet'i
 @IBOutlet weak var filterSegment: UISegmentedControl!
@@ -76,6 +79,8 @@ func loadTransactions() {
         print("ViewController: loadTransactions tamamlandı. Çekilen işlem sayısı: \(transactions.count)")
         applyFilter() // 🔴 Filtremizi burada uyguluyoruz
         updatePieChart()
+        updatePieChartsByCategory()
+
     } catch {
         print("ViewController: Veri çekilemedi: \(error)")
     }
@@ -95,6 +100,8 @@ func didAddTransaction() {
     loadTransactions()
     updateBalance()
     updatePieChart()
+    updatePieChartsByCategory()
+
 }
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -143,6 +150,37 @@ func applyFilter() {
 
         pieChartView.data = chartData
     }
+    
+    func updatePieChartsByCategory() {
+        let incomeTransactions = transactions.filter { $0.isIncome }
+        let expenseTransactions = transactions.filter { !$0.isIncome }
+
+        // Grupla ve topla: kategori bazlı gelir
+        let incomeByCategory = Dictionary(grouping: incomeTransactions, by: { $0.category ?? "Diğer" })
+            .mapValues { $0.reduce(0) { $0 + $1.amount } }
+
+        // Grupla ve topla: kategori bazlı gider
+        let expenseByCategory = Dictionary(grouping: expenseTransactions, by: { $0.category ?? "Diğer" })
+            .mapValues { $0.reduce(0) { $0 + $1.amount } }
+
+        var incomeChartData: [(CGFloat, UIColor)] = []
+        var expenseChartData: [(CGFloat, UIColor)] = []
+
+        // Renkler rastgele verilebilir veya sabitlenebilir
+        for (category, total) in incomeByCategory {
+            let color = UIColor(hue: CGFloat(drand48()), saturation: 0.7, brightness: 0.9, alpha: 1)
+            incomeChartData.append((CGFloat(total), color))
+        }
+
+        for (category, total) in expenseByCategory {
+            let color = UIColor(hue: CGFloat(drand48()), saturation: 0.7, brightness: 0.9, alpha: 1)
+            expenseChartData.append((CGFloat(total), color))
+        }
+
+        incomePieChartView.data = incomeChartData
+        expensePieChartView.data = expenseChartData
+    }
+
 
 
 

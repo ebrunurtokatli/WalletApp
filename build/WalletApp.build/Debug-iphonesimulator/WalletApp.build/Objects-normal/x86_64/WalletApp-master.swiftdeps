@@ -1,13 +1,13 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "7343e26807d98145c7639fe3abad781d3f9bed2cef74b2d0794d8225f7052243"
-build_start_time: [1746799551, 623779058]
-build_end_time: [1746799554, 232434988]
+build_start_time: [1746800634, 240592002]
+build_end_time: [1746800637, 251111030]
 inputs:
   "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AddTransactionViewController.swift": [1746791145, 22490978]
   "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AppDelegate.swift": [1746793791, 114103794]
   "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/PieChartView.swift": [1746799436, 859962940]
   "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/SceneDelegate.swift": [1746790650, 222447633]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/ViewController.swift": [1746799551, 486855030]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/ViewController.swift": [1746800632, 386447906]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Card+CoreDataModel.swift"
   : [1746797546, 916996002]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataClass.swift"

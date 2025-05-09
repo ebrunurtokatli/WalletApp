@@ -168,7 +168,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpS-e8-J25" customClass="PieChartView" customModule="WalletApp" customModuleProvider="target">
-                                <rect key="frame" x="84" y="625" width="240" height="128"/>
+                                <rect key="frame" x="16" y="585" width="110" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-gF-UpS" customClass="PieChartView" customModule="WalletApp" customModuleProvider="target">
+                                <rect key="frame" x="121" y="591" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pz1-Vy-CR8" customClass="PieChartView" customModule="WalletApp" customModuleProvider="target">
+                                <rect key="frame" x="57" y="713" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -178,7 +188,9 @@
                     </view>
                     <connections>
                         <outlet property="balanceLabel" destination="Jzf-Vf-fHs" id="dRE-Ba-qzw"/>
+                        <outlet property="expensePieChartView" destination="pz1-Vy-CR8" id="N4J-Dl-u3Z"/>
                         <outlet property="filterSegment" destination="ouL-Je-AUI" id="DWv-Kk-Orw"/>
+                        <outlet property="incomePieChartView" destination="1Fd-gF-UpS" id="1rm-1B-uhx"/>
                         <outlet property="pieChartView" destination="wpS-e8-J25" id="Zj1-YR-bNt"/>
                         <outlet property="tableView" destination="VRz-GO-geR" id="Q1a-wj-muC"/>
                     </connections>

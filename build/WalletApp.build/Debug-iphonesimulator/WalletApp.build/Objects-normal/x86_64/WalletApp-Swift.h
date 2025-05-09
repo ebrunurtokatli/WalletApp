@@ -345,6 +345,8 @@ SWIFT_CLASS("_TtC9WalletApp14ViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified balanceLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
 @property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified pieChartView;
+@property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified incomePieChartView;
+@property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified expensePieChartView;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified filterSegment;
 - (void)viewWillAppear:(BOOL)animated;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
