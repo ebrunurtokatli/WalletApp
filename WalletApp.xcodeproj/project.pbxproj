@@ -16,6 +16,7 @@
 		ABF66D412DCE214300D749E6 /* Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D3F2DCE214300D749E6 /* Card.xcdatamodeld */; };
 		ABF66D432DCE21E700D749E6 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D422DCE21E700D749E6 /* AddTransactionViewController.swift */; };
 		ABF66D4D2DCE2D3500D749E6 /* WalletApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D4B2DCE2D3500D749E6 /* WalletApp.xcdatamodeld */; };
+		ABF66D4F2DCE42A500D749E6 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D4E2DCE42A500D749E6 /* PieChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ABF66D402DCE214300D749E6 /* Card.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Card.xcdatamodel; sourceTree = "<group>"; };
 		ABF66D422DCE21E700D749E6 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		ABF66D4C2DCE2D3500D749E6 /* WalletApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WalletApp.xcdatamodel; sourceTree = "<group>"; };
+		ABF66D4E2DCE42A500D749E6 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				ABF66D3F2DCE214300D749E6 /* Card.xcdatamodeld */,
 				ABF66D422DCE21E700D749E6 /* AddTransactionViewController.swift */,
 				ABF66D4B2DCE2D3500D749E6 /* WalletApp.xcdatamodeld */,
+				ABF66D4E2DCE42A500D749E6 /* PieChartView.swift */,
 			);
 			path = WalletApp;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF66D4F2DCE42A500D749E6 /* PieChartView.swift in Sources */,
 				ABF66D412DCE214300D749E6 /* Card.xcdatamodeld in Sources */,
 				ABF66D232DCE1FA800D749E6 /* ViewController.swift in Sources */,
 				ABF66D4D2DCE2D3500D749E6 /* WalletApp.xcdatamodeld in Sources */,

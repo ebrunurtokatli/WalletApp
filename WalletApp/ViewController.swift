@@ -1,11 +1,13 @@
 import UIKit
 import CoreData
 
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddTransactionDelegate {
 
 
 @IBOutlet weak var balanceLabel: UILabel!
 @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var pieChartView: PieChartView!
 
 // 🔴 Yeni eklendi: Segmented Control outlet'i
 @IBOutlet weak var filterSegment: UISegmentedControl!
@@ -73,6 +75,7 @@ func loadTransactions() {
         transactions = try context.fetch(request)
         print("ViewController: loadTransactions tamamlandı. Çekilen işlem sayısı: \(transactions.count)")
         applyFilter() // 🔴 Filtremizi burada uyguluyoruz
+        updatePieChart()
     } catch {
         print("ViewController: Veri çekilemedi: \(error)")
     }
@@ -91,6 +94,7 @@ func didAddTransaction() {
     print("ViewController: didAddTransaction delegate metodu çağrıldı.")
     loadTransactions()
     updateBalance()
+    updatePieChart()
 }
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -125,6 +129,21 @@ func applyFilter() {
     }
     tableView.reloadData()
 }
+    func updatePieChart() {
+        let incomeTotal = transactions.filter { $0.isIncome }.reduce(0) { $0 + $1.amount }
+        let expenseTotal = transactions.filter { !$0.isIncome }.reduce(0) { $0 + $1.amount }
+
+        var chartData: [(CGFloat, UIColor)] = []
+        if incomeTotal > 0 {
+            chartData.append((CGFloat(incomeTotal), .systemGreen))
+        }
+        if expenseTotal > 0 {
+            chartData.append((CGFloat(expenseTotal), .systemRed))
+        }
+
+        pieChartView.data = chartData
+    }
+
 
 
 }

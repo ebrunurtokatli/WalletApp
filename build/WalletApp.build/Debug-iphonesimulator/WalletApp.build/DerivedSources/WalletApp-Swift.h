@@ -231,6 +231,7 @@ using UInt = size_t;
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreData;
+@import CoreFoundation;
 @import Foundation;
 @import UIKit;
 #endif
@@ -312,6 +313,14 @@ SWIFT_CLASS_NAMED("Cards")
 @property (nonatomic, copy) NSString * _Nullable name;
 @end
 
+
+SWIFT_CLASS("_TtC9WalletApp12PieChartView")
+@interface PieChartView : UIView
+- (void)drawRect:(CGRect)rect;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIScene;
 
@@ -337,6 +346,7 @@ SWIFT_CLASS("_TtC9WalletApp14ViewController")
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified balanceLabel;
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified pieChartView;
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified filterSegment;
 - (void)viewWillAppear:(BOOL)animated;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;

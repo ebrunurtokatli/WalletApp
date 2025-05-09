@@ -16,17 +16,9 @@
 		<data>
 		U0x8EM0781fCPb62BbZIXKeDlZ4=
 		</data>
-		<key>Base.lproj/Main.storyboardc/4x2-Sy-qCm-view-3He-O0-6xn.nib</key>
-		<data>
-		IYntE12doywLghT4IYkqTNvo8tg=
-		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		2pdn1G9zRg26nEI/lAZEqo2u0rs=
-		</data>
-		<key>Base.lproj/Main.storyboardc/UIViewController-4x2-Sy-qCm.nib</key>
-		<data>
-		8v4Ps9QvstasDak/OzuS4F7g9Bw=
+		YIP8P9Wxrwdd25LYV6ybK1Iix6Y=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-cpv-85-Cy9.nib</key>
 		<data>
@@ -34,7 +26,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-lFk-gT-laZ.nib</key>
 		<data>
-		VMSAxDvQS67uLdVqAoMvAU1Sq2c=
+		gUA9gFs2bdKUFnOoKuWdWxW4S9M=
 		</data>
 		<key>Base.lproj/Main.storyboardc/cpv-85-Cy9-view-Rzy-Qa-EaS.nib</key>
 		<data>
@@ -42,7 +34,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/lFk-gT-laZ-view-RLW-L1-ygU.nib</key>
 		<data>
-		ITiuC9rF2QwDdW809nCNcE5B6K4=
+		4cRxpy3kd9uNMrD+OYiDu2keSIs=
 		</data>
 		<key>Card.momd/Card.mom</key>
 		<data>
@@ -96,25 +88,11 @@
 			cWq7q+iQcmpSoaFGecnyPdKFEPFwRD3slgUmxFADkVs=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/4x2-Sy-qCm-view-3He-O0-6xn.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DeRKJOpEQLma0Q9kubHKaTLL4lvykCIlywxQEPYtrNY=
-			</data>
-		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SB+59BSbYdmss45/gHsHkz85pWhN6J7RGhn7LTsnPRw=
-			</data>
-		</dict>
-		<key>Base.lproj/Main.storyboardc/UIViewController-4x2-Sy-qCm.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			S3iU9XTq0MUddnwVXQiELhNFh6OdHL/E6nhZOdnjyLs=
+			Bne1mpyoZNlW6FXFmsoX6VYFSEz3cVWRAmOIJcBriW0=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-cpv-85-Cy9.nib</key>
@@ -128,7 +106,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MplWKKiujoc7j7gd7ujwZWtjGXWSfCZKTcIigrnoXXU=
+			kpzEyHrGEkPv9CTWW/y8wToKc1G8H8vJ/S0px8r/IBk=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/cpv-85-Cy9-view-Rzy-Qa-EaS.nib</key>
@@ -142,7 +120,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eIimK7XVd76eFiZ96RqCejDg6RCY143jTw2lwnz4gn8=
+			sNFEnqZADaEEohSs/VM3Lw660aCvlwsSyB5H6kTQRhw=
 			</data>
 		</dict>
 		<key>Card.momd/Card.mom</key>
