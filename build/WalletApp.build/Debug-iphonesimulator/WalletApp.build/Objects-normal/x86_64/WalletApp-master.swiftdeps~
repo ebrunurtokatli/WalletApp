@@ -1,21 +1,26 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
 options: "7343e26807d98145c7639fe3abad781d3f9bed2cef74b2d0794d8225f7052243"
-build_start_time: [1746797547, 735044]
-build_end_time: [1746797547, 57598114]
+build_start_time: [1746889790, 222012996]
+build_end_time: [1746889790, 316084861]
 inputs:
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AddTransactionViewController.swift": !private [1746791145, 22490978]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AddTransactionViewController.swift": !private [1746858864, 77925205]
   "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AppDelegate.swift": !private [1746793791, 114103794]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/DateFilterViewController.swift": !private [1746889572, 472600698]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/PieChartView.swift": !private [1746799436, 859962940]
   "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/SceneDelegate.swift": !private [1746790650, 222447633]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/ViewController.swift": !private [1746797542, 282209873]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/TransactionCell.swift": !private [1746887479, 426822185]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/TransactionsViewController.swift": !private [1746869985, 502029895]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/UIColor+Hex.swift": !private [1746880580, 208136320]
+  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/ViewController.swift": !private [1746880997, 266528606]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Card+CoreDataModel.swift"
-  : !private [1746797546, 916996002]
+  : !private [1746889789, 987521886]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataClass.swift"
-  : !private [1746797546, 921987533]
+  : !private [1746889789, 991350650]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataProperties.swift"
-  : !private [1746797546, 923635959]
+  : !private [1746889789, 992961883]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletApp+CoreDataModel.swift"
-  : !private [1746797546, 918065547]
+  : !private [1746889789, 987515926]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataClass.swift"
-  : !private [1746797546, 923064708]
+  : !private [1746889789, 991393089]
   ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataProperties.swift"
-  : !private [1746797546, 924296379]
+  : !private [1746889789, 993507385]

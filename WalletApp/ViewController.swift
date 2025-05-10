@@ -32,14 +32,30 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
     return filteredTransactions.count
 }
 
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    print("ViewController: cellForRowAt çağrıldı. IndexPath: \(indexPath.row)")
-    let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
-    let tx = filteredTransactions[indexPath.row]
-    cell.textLabel?.text = tx.category
-    cell.detailTextLabel?.text = "\(tx.isIncome ? "+" : "-")\(tx.amount)₺"
-    return cell
-}
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
+        let tx = filteredTransactions[indexPath.row]
+
+        // Başlık: Kategori
+        cell.textLabel?.text = tx.category ?? "Kategori Yok"
+
+        // Tutar ve Tarih/Saat
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        let dateString = formatter.string(from: tx.date ?? Date())
+        let amountText = String(format: "%@%.2f₺", tx.isIncome ? "+" : "-", tx.amount)
+
+        // Tutar başta, tarih sağda gibi göstermek için string biçimlendirme
+        let paddedAmount = String(format: "%-10s", (amountText as NSString).utf8String!)
+        cell.detailTextLabel?.text = "\(amountText)     \(dateString)"
+
+        // Renk: Gelir - Yeşil, Gider - Kırmızı
+        cell.detailTextLabel?.textColor = tx.isIncome ? UIColor(hex: "#86AB89") : UIColor(hex: "#FF8A8A")
+
+        return cell
+    }
+
+
 
 func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
@@ -91,6 +107,10 @@ func updateBalance() {
     let balance = transactions.reduce(0.0) { result, tx in
         return tx.isIncome ? result + tx.amount : result - tx.amount
     }
+    // 🔽 Buraya stil ayarlarını ekle
+    balanceLabel.textColor = .white
+    balanceLabel.font = UIFont.boldSystemFont(ofSize: 20) // Yazı boyutunu isteğine göre ayarla
+       
     balanceLabel.text = "Bakiye: \(balance) ₺"
     print("ViewController: Bakiye güncellendi: \(balance)")
 }
@@ -142,18 +162,32 @@ func applyFilter() {
 
         var chartData: [(CGFloat, UIColor)] = []
         if incomeTotal > 0 {
-            chartData.append((CGFloat(incomeTotal), .systemGreen))
+            chartData.append((CGFloat(incomeTotal), UIColor(hex: "#86AB89")))
         }
         if expenseTotal > 0 {
-            chartData.append((CGFloat(expenseTotal), .systemRed))
+            chartData.append((CGFloat(expenseTotal), UIColor(hex: "#FF8A8A")))
         }
 
         pieChartView.data = chartData
     }
     
+    
     func updatePieChartsByCategory() {
         let incomeTransactions = transactions.filter { $0.isIncome }
         let expenseTransactions = transactions.filter { !$0.isIncome }
+        let categoryColors: [String: UIColor] = [
+            "Maaş": UIColor(hex: "#AA60C8"),
+            "Hediye": UIColor(hex: "#D69ADE"),
+            "Yatırım": UIColor(hex: "#EABDE6"),
+            "Yemek": UIColor(hex: "#640D5F"),
+            "Ulaşım": UIColor(hex: "#B771E5"),
+            "Fatura": UIColor(hex: "#441752"),
+            "Diğer": UIColor(hex: "#A888B5"),
+            "Alışveriş": UIColor(hex: "#7E5CAD"),
+            "Sağlık": UIColor(hex: "#A294F9"),
+            "Eğlence": UIColor(hex: "#8174A0")
+        ]
+
 
         // Grupla ve topla: kategori bazlı gelir
         let incomeByCategory = Dictionary(grouping: incomeTransactions, by: { $0.category ?? "Diğer" })
@@ -168,12 +202,12 @@ func applyFilter() {
 
         // Renkler rastgele verilebilir veya sabitlenebilir
         for (category, total) in incomeByCategory {
-            let color = UIColor(hue: CGFloat(drand48()), saturation: 0.7, brightness: 0.9, alpha: 1)
+            let color = categoryColors[category] ?? .gray
             incomeChartData.append((CGFloat(total), color))
         }
 
         for (category, total) in expenseByCategory {
-            let color = UIColor(hue: CGFloat(drand48()), saturation: 0.7, brightness: 0.9, alpha: 1)
+            let color = categoryColors[category] ?? .gray
             expenseChartData.append((CGFloat(total), color))
         }
 

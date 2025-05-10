@@ -1,10 +1,9 @@
 //
 //  WalletTransaction+CoreDataProperties.swift
-//  
+//  WalletApp
 //
-//  Created by Trakya11 on 10.05.2025.
+//  Created by Trakya12 on 10.05.2025.
 //
-//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
@@ -18,8 +17,8 @@ extension WalletTransaction {
     }
 
     @NSManaged public var amount: Double
-    @NSManaged public var category: String?
     @NSManaged public var date: Date?
+    @NSManaged public var category: String?
     @NSManaged public var isIncome: Bool
 
 }

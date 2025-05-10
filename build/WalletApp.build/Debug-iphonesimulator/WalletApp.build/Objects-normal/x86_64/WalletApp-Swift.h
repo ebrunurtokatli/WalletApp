@@ -294,21 +294,24 @@ SWIFT_CLASS("_TtC9WalletApp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSEntityDescription;
-@class NSManagedObjectContext;
+@class UIDatePicker;
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
 
-SWIFT_CLASS_NAMED("Cards")
-@interface Cards : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-@interface Cards (SWIFT_EXTENSION(WalletApp))
-@property (nonatomic, copy) NSString * _Nullable cardNumber;
-@property (nonatomic, copy) NSString * _Nullable cvv;
-@property (nonatomic, copy) NSString * _Nullable expirationDate;
-@property (nonatomic, copy) NSString * _Nullable name;
+SWIFT_CLASS("_TtC9WalletApp24DateFilterViewController")
+@interface DateFilterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified startDatePicker;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified endDatePicker;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified filterButton;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+- (void)viewDidLoad;
+- (IBAction)filterButtonTapped:(UIButton * _Nonnull)sender;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -334,10 +337,35 @@ SWIFT_CLASS("_TtC9WalletApp13SceneDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC9WalletApp15TransactionCell")
+@interface TransactionCell : UITableViewCell
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UILabel;
-@class UITableView;
-@class NSIndexPath;
-@class UITableViewCell;
+
+SWIFT_CLASS("_TtC9WalletApp26TransactionsViewController")
+@interface TransactionsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet PieChartView * _Null_unspecified pieChartView;
+@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified pickerView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified incomeLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified expenseLabel;
+- (IBAction)backButtonTapped:(UIButton * _Nonnull)sender;
+- (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 @class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC9WalletApp14ViewController")
@@ -359,6 +387,8 @@ SWIFT_CLASS("_TtC9WalletApp14ViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC9WalletApp17WalletTransaction")
 @interface WalletTransaction : NSManagedObject

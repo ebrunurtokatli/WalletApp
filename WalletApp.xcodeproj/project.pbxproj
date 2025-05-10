@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937108572DCFB3580065E775 /* WalletApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 937108552DCFB3580065E775 /* WalletApp.xcdatamodeld */; };
+		9371085A2DCFB3BB0065E775 /* WalletTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937108582DCFB3BB0065E775 /* WalletTransaction+CoreDataClass.swift */; };
+		9371085B2DCFB3BB0065E775 /* WalletTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937108592DCFB3BB0065E775 /* WalletTransaction+CoreDataProperties.swift */; };
 		ABF66D1F2DCE1FA800D749E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D1E2DCE1FA800D749E6 /* AppDelegate.swift */; };
 		ABF66D212DCE1FA800D749E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D202DCE1FA800D749E6 /* SceneDelegate.swift */; };
 		ABF66D232DCE1FA800D749E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D222DCE1FA800D749E6 /* ViewController.swift */; };
 		ABF66D262DCE1FA800D749E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF66D242DCE1FA800D749E6 /* Main.storyboard */; };
 		ABF66D2B2DCE1FA900D749E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF66D2A2DCE1FA900D749E6 /* Assets.xcassets */; };
 		ABF66D2E2DCE1FA900D749E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF66D2C2DCE1FA900D749E6 /* LaunchScreen.storyboard */; };
-		ABF66D412DCE214300D749E6 /* Card.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D3F2DCE214300D749E6 /* Card.xcdatamodeld */; };
 		ABF66D432DCE21E700D749E6 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D422DCE21E700D749E6 /* AddTransactionViewController.swift */; };
-		ABF66D4D2DCE2D3500D749E6 /* WalletApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D4B2DCE2D3500D749E6 /* WalletApp.xcdatamodeld */; };
 		ABF66D4F2DCE42A500D749E6 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF66D4E2DCE42A500D749E6 /* PieChartView.swift */; };
+		ABFD210E2DCF317C0097225D /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD210D2DCF317C0097225D /* TransactionsViewController.swift */; };
+		ABFD21102DCF429C0097225D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD210F2DCF429C0097225D /* TransactionCell.swift */; };
+		ABFD21142DCF7FC10097225D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD21132DCF7FC10097225D /* UIColor+Hex.swift */; };
+		ABFD21162DCF87F10097225D /* DateFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD21152DCF87F10097225D /* DateFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		937108562DCFB3580065E775 /* WalletApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WalletApp.xcdatamodel; sourceTree = "<group>"; };
+		937108582DCFB3BB0065E775 /* WalletTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WalletTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		937108592DCFB3BB0065E775 /* WalletTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WalletTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ABF66D1B2DCE1FA800D749E6 /* WalletApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF66D1E2DCE1FA800D749E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABF66D202DCE1FA800D749E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,10 +36,12 @@
 		ABF66D2A2DCE1FA900D749E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF66D2D2DCE1FA900D749E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF66D2F2DCE1FA900D749E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABF66D402DCE214300D749E6 /* Card.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Card.xcdatamodel; sourceTree = "<group>"; };
 		ABF66D422DCE21E700D749E6 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
-		ABF66D4C2DCE2D3500D749E6 /* WalletApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WalletApp.xcdatamodel; sourceTree = "<group>"; };
 		ABF66D4E2DCE42A500D749E6 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		ABFD210D2DCF317C0097225D /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		ABFD210F2DCF429C0097225D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		ABFD21132DCF7FC10097225D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		ABFD21152DCF87F10097225D /* DateFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +58,8 @@
 		ABF66D122DCE1FA800D749E6 = {
 			isa = PBXGroup;
 			children = (
+				937108582DCFB3BB0065E775 /* WalletTransaction+CoreDataClass.swift */,
+				937108592DCFB3BB0065E775 /* WalletTransaction+CoreDataProperties.swift */,
 				ABF66D1D2DCE1FA800D749E6 /* WalletApp */,
 				ABF66D1C2DCE1FA800D749E6 /* Products */,
 			);
@@ -64,6 +76,7 @@
 		ABF66D1D2DCE1FA800D749E6 /* WalletApp */ = {
 			isa = PBXGroup;
 			children = (
+				937108552DCFB3580065E775 /* WalletApp.xcdatamodeld */,
 				ABF66D1E2DCE1FA800D749E6 /* AppDelegate.swift */,
 				ABF66D202DCE1FA800D749E6 /* SceneDelegate.swift */,
 				ABF66D222DCE1FA800D749E6 /* ViewController.swift */,
@@ -71,10 +84,12 @@
 				ABF66D2A2DCE1FA900D749E6 /* Assets.xcassets */,
 				ABF66D2C2DCE1FA900D749E6 /* LaunchScreen.storyboard */,
 				ABF66D2F2DCE1FA900D749E6 /* Info.plist */,
-				ABF66D3F2DCE214300D749E6 /* Card.xcdatamodeld */,
 				ABF66D422DCE21E700D749E6 /* AddTransactionViewController.swift */,
-				ABF66D4B2DCE2D3500D749E6 /* WalletApp.xcdatamodeld */,
 				ABF66D4E2DCE42A500D749E6 /* PieChartView.swift */,
+				ABFD210D2DCF317C0097225D /* TransactionsViewController.swift */,
+				ABFD210F2DCF429C0097225D /* TransactionCell.swift */,
+				ABFD21132DCF7FC10097225D /* UIColor+Hex.swift */,
+				ABFD21152DCF87F10097225D /* DateFilterViewController.swift */,
 			);
 			path = WalletApp;
 			sourceTree = "<group>";
@@ -151,12 +166,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF66D4F2DCE42A500D749E6 /* PieChartView.swift in Sources */,
-				ABF66D412DCE214300D749E6 /* Card.xcdatamodeld in Sources */,
 				ABF66D232DCE1FA800D749E6 /* ViewController.swift in Sources */,
-				ABF66D4D2DCE2D3500D749E6 /* WalletApp.xcdatamodeld in Sources */,
+				ABFD21162DCF87F10097225D /* DateFilterViewController.swift in Sources */,
+				9371085B2DCFB3BB0065E775 /* WalletTransaction+CoreDataProperties.swift in Sources */,
+				9371085A2DCFB3BB0065E775 /* WalletTransaction+CoreDataClass.swift in Sources */,
 				ABF66D1F2DCE1FA800D749E6 /* AppDelegate.swift in Sources */,
+				937108572DCFB3580065E775 /* WalletApp.xcdatamodeld in Sources */,
+				ABFD21102DCF429C0097225D /* TransactionCell.swift in Sources */,
 				ABF66D212DCE1FA800D749E6 /* SceneDelegate.swift in Sources */,
+				ABFD210E2DCF317C0097225D /* TransactionsViewController.swift in Sources */,
 				ABF66D432DCE21E700D749E6 /* AddTransactionViewController.swift in Sources */,
+				ABFD21142DCF7FC10097225D /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,25 +394,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		ABF66D3F2DCE214300D749E6 /* Card.xcdatamodeld */ = {
+		937108552DCFB3580065E775 /* WalletApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				ABF66D402DCE214300D749E6 /* Card.xcdatamodel */,
+				937108562DCFB3580065E775 /* WalletApp.xcdatamodel */,
 			);
-			currentVersion = ABF66D402DCE214300D749E6 /* Card.xcdatamodel */;
-			path = Card.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		ABF66D4B2DCE2D3500D749E6 /* WalletApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				ABF66D4C2DCE2D3500D749E6 /* WalletApp.xcdatamodel */,
-			);
-			currentVersion = ABF66D4C2DCE2D3500D749E6 /* WalletApp.xcdatamodel */;
-			name = WalletApp.xcdatamodeld;
-			path = ../../../../Documents/WalletApp/WalletApp/WalletApp.xcdatamodeld;
-			sourceTree = "<group>";
+			currentVersion = 937108562DCFB3580065E775 /* WalletApp.xcdatamodel */;
+			path = WalletApp.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

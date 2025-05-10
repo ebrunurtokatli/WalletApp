@@ -1,11 +1,12 @@
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/PieChartView.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/ViewController.swift
+/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/DateFilterViewController.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AppDelegate.swift
+/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/TransactionCell.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/SceneDelegate.swift
+/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/TransactionsViewController.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AddTransactionViewController.swift
-/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataClass.swift
-/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Cards+CoreDataProperties.swift
-/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/Card/Card+CoreDataModel.swift
+/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/UIColor+Hex.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataClass.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataProperties.swift
 /Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletApp+CoreDataModel.swift
