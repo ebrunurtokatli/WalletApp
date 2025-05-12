@@ -60,8 +60,8 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
             .filter { !$0.isIncome }
             .reduce(0.0) { $0 + $1.amount }
 
-        incomeLabel.text = "Gelir: +\(incomeTotal)₺"
-        expenseLabel.text = "Gider: -\(expenseTotal)₺"
+        incomeLabel.text = "Incomes: +\(incomeTotal)₺"
+        expenseLabel.text = "Expenses: -\(expenseTotal)₺"
 
         pieChartView.data = [
             (value: CGFloat(incomeTotal), color: .systemGreen),

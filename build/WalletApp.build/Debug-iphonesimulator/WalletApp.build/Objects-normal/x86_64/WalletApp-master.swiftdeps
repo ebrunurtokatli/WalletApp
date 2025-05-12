@@ -1,20 +1,16 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "7343e26807d98145c7639fe3abad781d3f9bed2cef74b2d0794d8225f7052243"
-build_start_time: [1746893388, 534353017]
-build_end_time: [1746893389, 731665134]
+options: "8fa6fd1ef5df0abeee8ea394532e72dfb9f3e347a85899b2030d0f0c4ff99801"
+build_start_time: [1747055451, 804231166]
+build_end_time: [1747055453, 176589965]
 inputs:
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AddTransactionViewController.swift": [1746890725, 166314363]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/AppDelegate.swift": [1746793791, 114103794]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/DateFilterViewController.swift": [1746893387, 826800107]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/PieChartView.swift": [1746799436, 859962940]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/SceneDelegate.swift": [1746790650, 222447633]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/TransactionCell.swift": [1746887479, 426822185]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/TransactionsViewController.swift": [1746869985, 502029895]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/UIColor+Hex.swift": [1746880580, 208136320]
-  "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/WalletApp/ViewController.swift": [1746892922, 914194583]
-  ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletApp+CoreDataModel.swift"
-  : [1746889789, 987515926]
-  ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataClass.swift"
-  : [1746889789, 991393089]
-  ? "/Users/trakya11/Desktop/WalletAppEbru/WalletApp/build/WalletApp.build/Debug-iphonesimulator/WalletApp.build/DerivedSources/CoreDataGenerated/WalletApp/WalletTransaction+CoreDataProperties.swift"
-  : [1746889789, 993507385]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/AddTransactionViewController.swift": [1747055373, 550435543]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/AppDelegate.swift": [1747054811, 93035221]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/DateFilterViewController.swift": [1747055439, 540066957]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/PieChartView.swift": [1747054811, 99571466]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/SceneDelegate.swift": [1747054811, 100132226]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/TransactionCell.swift": [1747054811, 100759983]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/TransactionsViewController.swift": [1747055451, 641483306]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/UIColor+Hex.swift": [1747054811, 101821660]
+  "/Users/trakya11/Documents/WalletApp/WalletApp/ViewController.swift": [1747055451, 655175685]
+  "/Users/trakya11/Documents/WalletApp/WalletTransaction+CoreDataClass.swift": [1747054811, 106959342]
+  "/Users/trakya11/Documents/WalletApp/WalletTransaction+CoreDataProperties.swift": [1747054811, 107151031]

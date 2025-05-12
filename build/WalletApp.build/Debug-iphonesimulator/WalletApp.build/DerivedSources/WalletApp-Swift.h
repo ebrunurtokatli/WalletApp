@@ -268,6 +268,7 @@ SWIFT_CLASS("_TtC9WalletApp28AddTransactionViewController")
 @property (nonatomic, weak) IBOutlet UISegmentedControl * _Null_unspecified typeSegmentedControl;
 - (void)viewDidLoad;
 - (void)doneTapped;
+- (void)dismissPicker;
 - (IBAction)saveTapped:(UIButton * _Nonnull)sender;
 - (IBAction)cancelTapped:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -392,7 +393,7 @@ SWIFT_CLASS("_TtC9WalletApp14ViewController")
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
-SWIFT_CLASS("_TtC9WalletApp17WalletTransaction")
+SWIFT_CLASS_NAMED("WalletTransaction")
 @interface WalletTransaction : NSManagedObject
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -402,8 +403,8 @@ SWIFT_CLASS("_TtC9WalletApp17WalletTransaction")
 
 @interface WalletTransaction (SWIFT_EXTENSION(WalletApp))
 @property (nonatomic) double amount;
-@property (nonatomic, copy) NSString * _Nullable category;
 @property (nonatomic, copy) NSDate * _Nullable date;
+@property (nonatomic, copy) NSString * _Nullable category;
 @property (nonatomic) BOOL isIncome;
 @end
 

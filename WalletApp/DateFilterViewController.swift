@@ -42,7 +42,7 @@ class DateFilterViewController: UIViewController, UITableViewDataSource, UITable
         
 
 
-        filterButton.setTitle("Filtrele", for: .normal)
+        filterButton.setTitle("Filter", for: .normal)
         filterButton.layer.cornerRadius = 10
      
     }

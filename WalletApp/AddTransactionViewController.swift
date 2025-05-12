@@ -15,30 +15,38 @@ class AddTransactionViewController: UIViewController {
 weak var delegate: AddTransactionDelegate?
 
 // 🔴 Kategori listesi ve picker tanımı
-let categories = ["Maaş", "Yemek", "Ulaşım", "Eğlence", "Alışveriş", "Fatura", "Sağlık", "Diğer"]
+    let categories = ["Salary", "Food", "Transportation", "Entertainment", "Gift", "Investment", "Shopping", "Bill", "Health", "Other"]
+
 let categoryPicker = UIPickerView()
 
-override func viewDidLoad() {
-    super.viewDidLoad()
-    print("AddTransactionViewController: viewDidLoad çağrıldı.")
-    
-    // 🔴 Picker ayarları
-    categoryPicker.delegate = self
-    categoryPicker.dataSource = self
-    categoryTextField.inputView = categoryPicker
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("AddTransactionViewController: viewDidLoad çağrıldı.")
 
-    // 🔴 Picker için toolbar ekle
-    let toolbar = UIToolbar()
-    toolbar.sizeToFit()
-    let doneButton = UIBarButtonItem(title: "Tamam", style: .plain, target: self, action: #selector(doneTapped))
-    toolbar.setItems([doneButton], animated: false)
-    categoryTextField.inputAccessoryView = toolbar
-}
+        // 🔴 Picker ayarları
+        categoryPicker.delegate = self
+        categoryPicker.dataSource = self
+        categoryTextField.inputView = categoryPicker
+
+    
+
+        // 🔴 Picker için toolbar ekle
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Tamam", style: .plain, target: self, action: #selector(doneTapped))
+        doneButton.tintColor = UIColor.systemIndigo
+
+        toolbar.setItems([doneButton], animated: false)
+        categoryTextField.inputAccessoryView = toolbar
+    }
 
 // 🔴 Picker kapatma işlemi
 @objc func doneTapped() {
     categoryTextField.resignFirstResponder()
 }
+    @objc func dismissPicker() {
+          view.endEditing(true)
+      }
 
 @IBAction func saveTapped(_ sender: UIButton) {
     print("AddTransactionViewController: Kaydet butonuna tıklandı.")

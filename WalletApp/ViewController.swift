@@ -96,6 +96,7 @@ func loadTransactions() {
         applyFilter() // 🔴 Filtremizi burada uyguluyoruz
         updatePieChart()
         updatePieChartsByCategory()
+        setupLegend()
 
     } catch {
         print("ViewController: Veri çekilemedi: \(error)")
@@ -111,7 +112,7 @@ func updateBalance() {
     balanceLabel.textColor = .white
     balanceLabel.font = UIFont.boldSystemFont(ofSize: 20) // Yazı boyutunu isteğine göre ayarla
        
-    balanceLabel.text = "Bakiye: \(balance) ₺"
+    balanceLabel.text = "Balance: \(balance) ₺"
     print("ViewController: Bakiye güncellendi: \(balance)")
 }
 
@@ -176,17 +177,18 @@ func applyFilter() {
         let incomeTransactions = transactions.filter { $0.isIncome }
         let expenseTransactions = transactions.filter { !$0.isIncome }
         let categoryColors: [String: UIColor] = [
-            "Maaş": UIColor(hex: "#AA60C8"),
-            "Hediye": UIColor(hex: "#D69ADE"),
-            "Yatırım": UIColor(hex: "#EABDE6"),
-            "Yemek": UIColor(hex: "#640D5F"),
-            "Ulaşım": UIColor(hex: "#B771E5"),
-            "Fatura": UIColor(hex: "#441752"),
-            "Diğer": UIColor(hex: "#A888B5"),
-            "Alışveriş": UIColor(hex: "#7E5CAD"),
-            "Sağlık": UIColor(hex: "#A294F9"),
-            "Eğlence": UIColor(hex: "#8174A0")
+            "Salary": UIColor(hex: "#FFB8E0"),
+            "Gift": UIColor(hex: "#D3E671"),
+            "Investment": UIColor(hex: "#FDAB9E"),
+            "Food": UIColor(hex: "#73C7C7"),
+            "Transportation": UIColor(hex: "#CB9DF0"),
+            "Bill": UIColor(hex: "#FF8A8A"),
+            "Other": UIColor(hex: "#667BC6"),
+            "Shopping": UIColor(hex: "#F7418F"),
+            "Health": UIColor(hex: "#FFDB5C"),
+            "Entertainment": UIColor(hex: "#DCFFB7")
         ]
+
 
 
         // Grupla ve topla: kategori bazlı gelir
@@ -214,6 +216,66 @@ func applyFilter() {
         incomePieChartView.data = incomeChartData
         expensePieChartView.data = expenseChartData
     }
+    
+    func setupLegend() {
+        let categoryColors: [String: UIColor] = [
+            "Salary": UIColor(hex: "#FFB8E0"),
+            "Gift": UIColor(hex: "#D3E671"),
+            "Investment": UIColor(hex: "#FDAB9E"),
+            "Food": UIColor(hex: "#73C7C7"),
+            "Transportation": UIColor(hex: "#CB9DF0"),
+            "Bill": UIColor(hex: "#FF8A8A"),
+            "Other": UIColor(hex: "#667BC6"),
+            "Shopping": UIColor(hex: "#F7418F"),
+            "Health": UIColor(hex: "#FFDB5C"),
+            "Entertainment": UIColor(hex: "#DCFFB7")
+        ]
+        let sortedCategories = ["Salary", "Gift", "Investment", "Food", "Transportation", "Bill", "Other", "Shopping", "Health", "Entertainment"]
+
+
+
+        let mainStack = UIStackView()
+        mainStack.axis = .vertical
+        mainStack.spacing = 8
+        mainStack.translatesAutoresizingMaskIntoConstraints = false
+
+        var currentRowStack: UIStackView?
+
+        for (index, category) in sortedCategories.enumerated() {
+            if index % 5 == 0 {
+                // Yeni satır başlat
+                currentRowStack = UIStackView()
+                currentRowStack?.axis = .horizontal
+                currentRowStack?.spacing = 8
+                mainStack.addArrangedSubview(currentRowStack!)
+            }
+
+            let colorBox = UIView()
+            colorBox.backgroundColor = categoryColors[category]
+            colorBox.widthAnchor.constraint(equalToConstant: 20).isActive = true
+            colorBox.heightAnchor.constraint(equalToConstant: 20).isActive = true
+
+            let label = UILabel()
+            label.text = category
+            label.font = UIFont.systemFont(ofSize: 10)
+
+            let legendItem = UIStackView()
+            legendItem.axis = .horizontal
+            legendItem.spacing = 8
+            legendItem.addArrangedSubview(colorBox)
+            legendItem.addArrangedSubview(label)
+
+            currentRowStack?.addArrangedSubview(legendItem)
+        }
+
+        view.addSubview(mainStack)
+
+        NSLayoutConstraint.activate([
+            mainStack.topAnchor.constraint(equalTo: pieChartView.bottomAnchor, constant: 16),
+            mainStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+
 
 
 
