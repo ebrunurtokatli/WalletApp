@@ -64,8 +64,8 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         expenseLabel.text = "Expenses: -\(expenseTotal)₺"
 
         pieChartView.data = [
-            (value: CGFloat(incomeTotal), color: .systemGreen),
-            (value: CGFloat(expenseTotal), color: .systemRed)
+            (value: CGFloat(incomeTotal), UIColor(hex: "#64E2B7")),
+            (value: CGFloat(expenseTotal), UIColor(hex: "#D50B8B"))
         ]
     }
 

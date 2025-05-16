@@ -50,7 +50,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
         cell.detailTextLabel?.text = "\(amountText)     \(dateString)"
 
         // Renk: Gelir - Yeşil, Gider - Kırmızı
-        cell.detailTextLabel?.textColor = tx.isIncome ? UIColor(hex: "#86AB89") : UIColor(hex: "#FF8A8A")
+        cell.detailTextLabel?.textColor = tx.isIncome ? UIColor(hex: "#309898") : UIColor(hex: "#E55050")
 
         return cell
     }
@@ -163,10 +163,10 @@ func applyFilter() {
 
         var chartData: [(CGFloat, UIColor)] = []
         if incomeTotal > 0 {
-            chartData.append((CGFloat(incomeTotal), UIColor(hex: "#86AB89")))
+            chartData.append((CGFloat(incomeTotal), UIColor(hex: "#64E2B7")))
         }
         if expenseTotal > 0 {
-            chartData.append((CGFloat(expenseTotal), UIColor(hex: "#FF8A8A")))
+            chartData.append((CGFloat(expenseTotal), UIColor(hex: "#D50B8B")))
         }
 
         pieChartView.data = chartData

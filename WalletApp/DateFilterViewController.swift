@@ -111,6 +111,9 @@ class DateFilterViewController: UIViewController, UITableViewDataSource, UITable
         let category = transaction.category ?? "Kategori Yok"
         let amount = String(format: "%.2f ₺", transaction.amount)
         cell.detailTextLabel?.text = "\(incomeOrExpense) \(amount) | \(category)"
+        let textColor = transaction.isIncome ? UIColor(hex: "#309898") : UIColor(hex: "#E55050")
+         cell.detailTextLabel?.textColor = textColor
+
         
         return cell
     }
